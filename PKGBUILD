@@ -18,7 +18,11 @@ sha256sums=('6a26a78814a3b6dbfe2ed959eceef4451e97d7476e75c7d6914bc7b4987e95d3'
 
 prepare() {
   cd "${pkgname}-${pkgver}"
-  patch -p1 -i ../make-ZyppCommon-cmake-module-includable.patch 
+  patch -p1 -i ../make-ZyppCommon-cmake-module-includable.patch
+
+  # Remove once https://github.com/openSUSE/zypper/pull/349 is merged/released.
+  sed -i '7,8 s/^/\/\//' src/utils/Augeas.cc
+  sed -i '10 s/^/\/\//' src/utils/Augeas.cc
 }
 
 build() {
