@@ -1,6 +1,6 @@
 pkgbase = zypper
 	pkgdesc = Command line software manager using libzypp
-	pkgver = 1.14.26
+	pkgver = 1.14.76
 	pkgrel = 1
 	url = https://github.com/openSUSE/zypper
 	arch = i686
@@ -19,10 +19,7 @@ pkgbase = zypper
 	provides = zypper
 	provides = apt
 	conflicts = apt
-	source = https://github.com/openSUSE/zypper/archive/1.14.26.tar.gz
-	source = make-ZyppCommon-cmake-module-includable.patch
-	sha256sums = 6a26a78814a3b6dbfe2ed959eceef4451e97d7476e75c7d6914bc7b4987e95d3
-	sha256sums = f5cdd85109c58d786f1124fa3cab1c5431a93a8d87a59117eac257c6e4698ae7
+	source = https://github.com/openSUSE/zypper/archive/1.14.76.tar.gz
+	sha256sums = 8bf00cc9ffbb9afbd274603d98673c9d805636b68d8188f3fa82b13c16e8d09d
 
 pkgname = zypper
-

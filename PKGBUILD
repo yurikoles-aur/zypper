@@ -1,7 +1,7 @@
 # Maintainer: Yurii Kolesnykov <root@yurikoles.com>
 
 pkgname=zypper
-pkgver=1.14.26
+pkgver=1.14.76
 pkgrel=1
 pkgdesc="Command line software manager using libzypp"
 arch=('i686' 'x86_64')
@@ -11,15 +11,8 @@ depends=('libzypp' 'libxml2' 'procps' 'readline' 'augeas')
 makedepends=('git' 'cmake' 'ninja' 'boost' 'asciidoc')
 provides=('zypper' 'apt')
 conflicts=('apt')
-source=("https://github.com/openSUSE/zypper/archive/${pkgver}.tar.gz"
-        'make-ZyppCommon-cmake-module-includable.patch')
-sha256sums=('6a26a78814a3b6dbfe2ed959eceef4451e97d7476e75c7d6914bc7b4987e95d3'
-            'f5cdd85109c58d786f1124fa3cab1c5431a93a8d87a59117eac257c6e4698ae7')
-
-prepare() {
-  cd "${pkgname}-${pkgver}"
-  patch -p1 -i ../make-ZyppCommon-cmake-module-includable.patch 
-}
+source=("https://github.com/openSUSE/zypper/archive/${pkgver}.tar.gz")
+sha256sums=('8bf00cc9ffbb9afbd274603d98673c9d805636b68d8188f3fa82b13c16e8d09d')
 
 build() {
   cd "${pkgname}-${pkgver}"
